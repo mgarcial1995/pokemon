@@ -1,19 +1,14 @@
-# projectpoke
+# Pokeproject - Martin Garcia
+## Desarrollo
 
-## Project setup
-```
-npm install
-```
+- Realice el proyecto usando Vue CLI con Sass
+- Use el store VueX para traer los datos y poder gestionarlos dentro de la aplicación
+- El search hice que se pueda filtrar conforme se vaya escribiendo, usando la función includes(), como también puedo usar expresiones regulares
+- Para hacer la copia del portapapeles use vue-clipboard2, que hace esta tarea mucho más sencilla y limpia con las multiples opciones de funcionalidad
+- No estaba seguro de si el favorito podia agregarse dentro o fuera del modal, asi que solo hice que se añada desde fuera y el modal muestre la información del pokemon.
 
-### Compiles and hot-reloads for development
-```
+## Instalación
+```sh
+npm i
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

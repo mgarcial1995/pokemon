@@ -1,0 +1,188 @@
+.button{
+    background-color: #F22539;
+    color: #FFFFFF;
+    padding: .8rem 2rem;
+    width: auto;
+    display: inline-block;
+    border-radius: 20rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    &:active{
+        background-color: #C00E20;
+    }
+}
+.button_navbar {
+    width: 15rem;
+    color: #FFFFFF;
+    display: flex;
+    text-align: center;
+    justify-content:center;
+    font-weight: 700;
+    border-radius: 20rem;
+    padding: 1rem 1rem;
+    background-color: #BFBFBF;
+    &_img{
+        margin-right: .4rem;
+    }
+}
+.empty{
+    margin: 4rem auto 0 auto;
+    text-align: center;
+    &_title{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    &_text{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+}
+.loader {
+    @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+    }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_img {
+        transform: rotate(360deg);
+        width: 6rem;
+        height: 6rem;
+        position: relative;
+        animation: spin 4s linear infinite;
+    }
+}
+.inputText {
+    border-radius: .3rem;
+    // width: 19.5rem;
+    width: 100%;
+    height: 3rem;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &_img{
+        width: 2rem;
+        height: 2rem;
+        margin: 0 1rem;
+    }
+    &_input{
+        border: none;
+        width: 100%;
+        border-radius: 0 .5rem .5rem 0;
+        height: 100%;
+        font-size: 1.2rem;
+        outline: none;
+        &::placeholder{
+            color: #BFBFBF
+        }
+    }
+}
+hr{
+    color: #E8E8E8;
+    background-color: #E8E8E8;
+}
+.star_container{
+    width: 2.8rem;
+    height: 2.8rem;
+    // height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#F5F5F5;
+    border-radius:50%;
+    // padding: .4rem;
+}
+.navbar{
+    width: 100%;
+    height: 5rem;
+    background-color: #FFFFFF;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    box-shadow: 0px -5px 4px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    &_content {
+        max-width: 35rem;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+}
+.infomodal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 7;
+    &_background {
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        position: fixed;
+        opacity: 0.5;    }
+    &_modal{
+        position: fixed;
+        min-width: 22rem;
+        // width: 60rem;
+        height:auto;
+        background-color: #fff;
+        overflow: hidden;
+        border-radius: .4rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        &_close{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        &_bg{
+            width: 100%;
+            height: 14rem;
+            background-image: url('../assets/background.png');
+            background-position: top center;
+            background-size: auto;
+            background-repeat: repeat-x;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &_img{
+                width: 11rem;
+                height: auto;
+            }
+        }
+        &_info{
+            padding: .2rem 1.5rem;
+            &_text{
+                p{
+                    padding: 1rem 0;
+                    text-transform: capitalize;
+                }
+            }
+            &_bot{
+                margin: 1.5rem 0;
+                display: flex;
+                justify-content:space-between;
+                align-items:center;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .infomodal{
+        &_modal{
+            width: 50%;
+        }
+    }
+}
